@@ -10,7 +10,7 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
     <http:listener-config name="HTTP_Listener_Configuration" host="0.0.0.0" port="${http.port}" doc:name="HTTP Listener Configuration"/>
     <http:request-config name="HTTP_Request_Configuration" host="jenkinsmule1.cloudhub.io" port="80" doc:name="HTTP Request Configuration"/>
     <flow name="jenkinmuledependentFlow">
-        <http:listener config-ref="HTTP_Listener_Configuration" path="/call" doc:name="HTTP"/>
+        <http:listener config-ref="HTTP_Listener_Configuration" path="/call1" doc:name="HTTP"/>
         <http:request config-ref="HTTP_Request_Configuration" path="/jenkin" method="GET" doc:name="HTTP"/>
     </flow>
 </mule>
