@@ -12,6 +12,6 @@ http://www.mulesoft.org/schema/mule/ee/tracking http://www.mulesoft.org/schema/m
     <flow name="jenkinmuledependentFlow">
         <http:listener config-ref="HTTP_Listener_Configuration" path="/call123" doc:name="HTTP"/>
         <http:request config-ref="HTTP_Request_Configuration" path="/jenkin" method="GET" doc:name="HTTP"/>
-        <logger message="#[payload] payload" level="INFO" doc:name="Logger"/>
+        <logger message="#[payload] is the payload" level="INFO" doc:name="Logger"/>
     </flow>
 </mule>
